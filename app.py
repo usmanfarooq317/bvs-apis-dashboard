@@ -14,23 +14,6 @@ HTML_PAGE = """
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IBM/RSA BVS-API Dashboard</title>
 <style>
-<<<<<<< HEAD
-=======
-      .dashboard-btn {
-        display: inline-block;
-        margin-bottom: 20px;
-        padding: 10px 15px;
-        background-color: #4f46e5; /* A nice purple/blue */
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-        transition: background-color 0.3s;
-      }
-      .dashboard-btn:hover {
-        background-color: #3730a3;
-      }
->>>>>>> 7e5500caae1004e90a1df11c00ac4fec29dccbe0
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -368,10 +351,8 @@ def run_all():
     session["final_response"] = json.dumps(responses)
     return redirect(url_for("home"))
 
-<<<<<<< HEAD
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5080, debug=True)
-=======
-# if __name__ == "__main__":
-#     app.run(host="0.0.0.0", port=5080, debug=True)
->>>>>>> 7e5500caae1004e90a1df11c00ac4fec29dccbe0
+
+
