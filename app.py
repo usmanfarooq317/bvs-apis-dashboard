@@ -14,6 +14,20 @@ HTML_PAGE = """
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IBM/RSA BVS-API Dashboard</title>
 <style>
+      .dashboard-btn {
+        display: inline-block;
+        margin-bottom: 20px;
+        padding: 10px 15px;
+        background-color: #4f46e5; /* A nice purple/blue */
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+      .dashboard-btn:hover {
+        background-color: #3730a3;
+      }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -100,12 +114,13 @@ function showLoading() {
 </script>
 </head>
 <body>
-<div class="container">
+  <div class="container">
+    <a href="/" class="dashboard-btn">← Back to Dashboard</a>
   <h1>🔐 IBM/RSA BVS-API Dashboard</h1>
 
   <div class="card">
     <h3>Run All APIs</h3>
-    <form method="POST" action="/run_all" onsubmit="showLoading()">
+    <form method="POST" action="run_all" onsubmit="showLoading()">
       <label for="user">Mobile Number</label>
       <input type="text" id="user" name="user" value="{{ mobile_number }}" placeholder="Enter mobile number@merchid" required>
       <div class="hint">Enter Mobile Number in this format (e.g., 923431664399@2900)</div>
@@ -342,5 +357,5 @@ def run_all():
     session["final_response"] = json.dumps(responses)
     return redirect(url_for("home"))
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5080, debug=True)
+# if __name__ == "__main__":
+#     app.run(host="0.0.0.0", port=5080, debug=True)
