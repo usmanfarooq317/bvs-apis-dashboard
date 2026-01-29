@@ -148,10 +148,3 @@ When opening a PR, please:
 3. Add tests where appropriate
 4. Open a pull request with a clear description of changes
 
-License
-
-If you want to use a license, add a LICENSE file to the repository. If you prefer MIT, Apache-2.0, or similar, include that file and update this section.
-
-Credits
-
-Created and maintained by the repository owner.
